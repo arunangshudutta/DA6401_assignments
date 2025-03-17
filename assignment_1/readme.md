@@ -1,6 +1,7 @@
 # Wandb report link
 https://api.wandb.ai/links/arunangshudutta218-iitm/fjeyu4w5
-
+# Github
+https://github.com/arunangshudutta/DA6401_assignments/tree/main/assignment_1
 # To run train.py
 
 - Do ```python train.py --wandb_entity ENTITY_NAME --wandb_project PROJECT_NAME``` to run the script, where ```ENTITY_NAME``` & ```PROJECT_NAME``` is your entity name and proejct name. Currently, the default is set to mine.
