@@ -23,7 +23,6 @@ https://api.wandb.ai/links/arunangshudutta218-iitm/fjeyu4w5
 | `-beta`, `--beta` | 0.9 | Beta used by rmsprop optimizer | 
 | `-beta1`, `--beta1` | 0.9 | Beta1 used by adam and nadam optimizers. | 
 | `-beta2`, `--beta2` | 0.999 | Beta2 used by adam and nadam optimizers. |
-| `-eps`, `--epsilon` | 0.0000001 | Epsilon used by optimizers. |
 | `-w_d`, `--weight_decay` | 0 | Weight decay used by optimizers. |
 | `-w_i`, `--weight_init` | Xavier | choices:  ["random", "Xavier"] | 
 | `-nhl`, `--num_layers` | 3 | Number of hidden layers used in feedforward neural network. | 
