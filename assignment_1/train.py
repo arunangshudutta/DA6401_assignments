@@ -376,7 +376,7 @@ def load_split_dataset_mnist(test_ratio=0.3):
 
 
 def train_model(X_train,Y_train, X_test, Y_test, epoch=1,batch_size=25, num_neurons_hidden = [10], activation_functions = ['sigmoid'], loss_function = 'cross_entropy',
-                weights_init_type='random', optimizer = 'sgd', learning_rate = 0.1, opti_beta = [0.5, 0.5], w_d = 0, plot_acc_loss = False):
+                weights_init_type='random', optimizer = 'sgd', learning_rate = 0.1, opti_beta = [0.5, 0.5], w_d = 0, plot_acc_loss = True):
 
   """
   X has shape (number of features, number of samples in train data set)
@@ -573,6 +573,14 @@ def main(args):
     num_neurons=wandb.config.hidden_size
     activation_function=wandb.config.activation
 
+
+    if num_hidden_layers == None:
+      num_hidden_layers = 1
+    if num_neurons == None:
+      num_neurons = 4
+    if activation_function == None:
+      activation_function = 'sigmoid'
+      
     neuros_num = []
     act_func = []
     for i in range(num_hidden_layers):
@@ -583,6 +591,7 @@ def main(args):
       opti_beta = [beta]
     elif beta1 != None:
       opti_beta = [beta1, beta2]
+
 
     # Dataset 
     if dataset=='fashion_mnist':
